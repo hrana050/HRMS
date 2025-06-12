@@ -1,0 +1,29 @@
+name: CI - EmployeeService
+
+on:
+  push:
+    paths:
+      - 'EmployeeService.*/**'
+      - '.github/workflows/ci-employee.yml'
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore EmployeeService.API/EmployeeService.API.csproj
+
+      - name: Build
+        run: dotnet build EmployeeService.API/EmployeeService.API.csproj --configuration Release
+
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
