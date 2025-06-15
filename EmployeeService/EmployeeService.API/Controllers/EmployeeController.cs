@@ -21,7 +21,7 @@ namespace EmployeeService.API.Controllers
         [Route("create-employee")]
         public async Task<IActionResult> Create(CreateEmployeeDto employeeDto)
         {
-            int x = "this is a string";
+          
             var result = await _mediator.Send(new CreateEmployeeCommand(employeeDto));
             return Ok(result);
         }
