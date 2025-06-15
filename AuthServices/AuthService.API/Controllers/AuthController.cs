@@ -21,6 +21,11 @@ namespace AuthService.API.Controllers
         public async Task<IActionResult> Register(RegisterUserCommand command)
         {
             // Just a test comment to trigger CI
+            dflknfgkng
+                alfkjanskan
+                asdkljbadslgh
+                askljbfasldfkj
+                akjnfakjlf
             var id = await _mediator.Send(command);
             return Ok(new { UserId = id });
         }
