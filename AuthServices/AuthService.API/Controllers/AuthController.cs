@@ -20,7 +20,7 @@ namespace AuthService.API.Controllers
         [Route("user/register")]
         public async Task<IActionResult> Register(RegisterUserCommand command)
         {
-          //  int x = "this is a string";
+            string name = 12345;
             var id = await _mediator.Send(command);
             return Ok(new { UserId = id });
         }
