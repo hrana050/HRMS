@@ -3,7 +3,7 @@ name: CI - APIGateway
 on:
   push:
     paths:
-      - 'APIGateway/**'
+      - 'APIGateway.*/**'
 
 jobs:
   build:

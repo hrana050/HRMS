@@ -3,7 +3,7 @@ name: CI - AuthService
 on:
   push:
     paths:
-      - 'AuthService/**'
+       - 'AuthService.*/**'
 
 jobs:
   build:

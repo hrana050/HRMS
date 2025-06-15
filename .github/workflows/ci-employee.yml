@@ -3,7 +3,7 @@ name: CI - EmployeeService
 on:
   push:
     paths:
-      - 'EmployeeService/**'
+      - 'EmployeeService.*/**'
 
 jobs:
   build:
