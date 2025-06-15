@@ -21,7 +21,7 @@ namespace EmployeeService.API.Controllers
         [Route("create-department")]
         public async Task<IActionResult> Create(string name)
         {
-         
+            int y = "tesitng";
             var id = await _mediator.Send(new CreateDepartmentCommand(name));
             return Ok(id);
         }
