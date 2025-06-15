@@ -2,21 +2,15 @@ name: CI - AuthService
 
 on:
   push:
-    branches:
-      - master
     paths:
-      - 'AuthService.API/**'
-      - 'AuthService.Application/**'
-      - 'AuthService.Domain/**'
-      - 'AuthService.Infrastructure/**'
+      - 'AuthService/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
@@ -24,10 +18,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore
-        run: dotnet restore AuthService.API/AuthService.API.csproj
+        run: dotnet restore AuthService/AuthService.API/AuthService.API.csproj
 
       - name: Build
-        run: dotnet build AuthService.API/AuthService.API.csproj --configuration Release
+        run: dotnet build AuthService/AuthService.API/AuthService.API.csproj --configuration Release
 
       - name: Test
         run: dotnet test --no-build --verbosity normal

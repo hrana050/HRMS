@@ -20,7 +20,7 @@ namespace AuthService.API.Controllers
         [Route("user/register")]
         public async Task<IActionResult> Register(RegisterUserCommand command)
         {
-            // test CI trigger for AuthService
+            - return Ok("Login successful");
             var id = await _mediator.Send(command);
             return Ok(new { UserId = id });
         }
