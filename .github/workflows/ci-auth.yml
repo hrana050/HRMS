@@ -2,6 +2,8 @@ name: CI - AuthService
 
 on:
   push:
+  branches:
+      - master
     paths:
        - 'AuthService/**'
 
