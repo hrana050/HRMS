@@ -3,16 +3,14 @@ name: CI - EmployeeService
 on:
   push:
     paths:
-      - 'EmployeeService.*/**'
-      - '.github/workflows/ci-employee.yml'
-  pull_request:
+      - 'EmployeeService/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
@@ -20,10 +18,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore
-        run: dotnet restore EmployeeService.API/EmployeeService.API.csproj
+        run: dotnet restore EmployeeService/EmployeeService.API/EmployeeService.API.csproj
 
       - name: Build
-        run: dotnet build EmployeeService.API/EmployeeService.API.csproj --configuration Release
+        run: dotnet build EmployeeService/EmployeeService.API/EmployeeService.API.csproj --configuration Release
 
       - name: Test
         run: dotnet test --no-build --verbosity normal

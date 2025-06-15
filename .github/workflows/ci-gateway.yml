@@ -4,15 +4,13 @@ on:
   push:
     paths:
       - 'APIGateway/**'
-      - '.github/workflows/ci-gateway.yml'
-  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
@@ -24,3 +22,6 @@ jobs:
 
       - name: Build
         run: dotnet build APIGateway/APIGateway.csproj --configuration Release
+
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
