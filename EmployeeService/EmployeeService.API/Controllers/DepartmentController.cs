@@ -32,5 +32,11 @@ namespace EmployeeService.API.Controllers
             var list = await _mediator.Send(new GetAllDepartmentsQuery());
             return Ok(list);
         }
+        public async Task<IActionResult> GetAll_a()
+        {
+            var list = await _mediator.Send(new GetAllDepartmentsQuery());
+            return Ok(list);
+        }
+
     }
 }
