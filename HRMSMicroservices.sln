@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel", "SharedKernel\SharedKernel.csproj", "{FF63395E-4661-4DF0-811B-603B28150A86}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
@@ -25,11 +23,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeService.API", "Empl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeService.Application", "EmployeeService\EmployeeService.Application\EmployeeService.Application.csproj", "{0D425F5B-B747-959C-F2D0-0D59AAE8189C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeService.Domain", "EmployeeService\EmployeeService.Domain\EmployeeService.Domain.csproj", "{75C0B768-0D01-5818-A8AE-B7B7E59E3B35}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeService.Infrastructure", "EmployeeService\EmployeeService.Infrastructure\EmployeeService.Infrastructure.csproj", "{A2FACFD1-2AF4-5C08-3C5F-34B2F1CF6F7F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "Gateway\APIGateway\APIGateway.csproj", "{99C27881-4371-A20A-3390-69632B7DCEFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthServices", "AuthServices", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EmployeeService", "EmployeeService", "{6E9E0A37-779D-4421-9085-02D550335971}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{0D4137DF-2A76-46EA-8EAB-FE3BA0319DCB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{673F8E93-B83A-4548-9A03-3EBB56257FE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{36870170-B097-48D4-B031-BDAE966A0133}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci-auth.yml = .github\workflows\ci-auth.yml
+		.github\workflows\ci-employee.yml = .github\workflows\ci-employee.yml
+		.github\workflows\ci-gateway.yml = .github\workflows\ci-gateway.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeService.Domain", "EmployeeService\EmployeeService.Domain\EmployeeService.Domain.csproj", "{75C0B768-0D01-5818-A8AE-B7B7E59E3B35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +50,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FF63395E-4661-4DF0-811B-603B28150A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF63395E-4661-4DF0-811B-603B28150A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF63395E-4661-4DF0-811B-603B28150A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF63395E-4661-4DF0-811B-603B28150A86}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36064A79-8239-6136-391E-43DF252EB171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36064A79-8239-6136-391E-43DF252EB171}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36064A79-8239-6136-391E-43DF252EB171}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -65,10 +74,6 @@ Global
 		{0D425F5B-B747-959C-F2D0-0D59AAE8189C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D425F5B-B747-959C-F2D0-0D59AAE8189C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D425F5B-B747-959C-F2D0-0D59AAE8189C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75C0B768-0D01-5818-A8AE-B7B7E59E3B35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75C0B768-0D01-5818-A8AE-B7B7E59E3B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75C0B768-0D01-5818-A8AE-B7B7E59E3B35}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75C0B768-0D01-5818-A8AE-B7B7E59E3B35}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A2FACFD1-2AF4-5C08-3C5F-34B2F1CF6F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2FACFD1-2AF4-5C08-3C5F-34B2F1CF6F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2FACFD1-2AF4-5C08-3C5F-34B2F1CF6F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -77,9 +82,25 @@ Global
 		{99C27881-4371-A20A-3390-69632B7DCEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99C27881-4371-A20A-3390-69632B7DCEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99C27881-4371-A20A-3390-69632B7DCEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C0B768-0D01-5818-A8AE-B7B7E59E3B35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C0B768-0D01-5818-A8AE-B7B7E59E3B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C0B768-0D01-5818-A8AE-B7B7E59E3B35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C0B768-0D01-5818-A8AE-B7B7E59E3B35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36064A79-8239-6136-391E-43DF252EB171} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{356F958A-9DB6-55A7-A30A-12A0D96A3BA9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{02788EEE-B9E8-6B62-7F87-51E015283CC6} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{EAF62CE3-081C-66E7-8E13-66267532B6FB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7CF18C89-1891-3BEE-302C-095E4898B0EF} = {6E9E0A37-779D-4421-9085-02D550335971}
+		{0D425F5B-B747-959C-F2D0-0D59AAE8189C} = {6E9E0A37-779D-4421-9085-02D550335971}
+		{A2FACFD1-2AF4-5C08-3C5F-34B2F1CF6F7F} = {6E9E0A37-779D-4421-9085-02D550335971}
+		{99C27881-4371-A20A-3390-69632B7DCEFD} = {0D4137DF-2A76-46EA-8EAB-FE3BA0319DCB}
+		{36870170-B097-48D4-B031-BDAE966A0133} = {673F8E93-B83A-4548-9A03-3EBB56257FE7}
+		{75C0B768-0D01-5818-A8AE-B7B7E59E3B35} = {6E9E0A37-779D-4421-9085-02D550335971}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A95DA564-052A-4554-A3E5-8542532A9862}

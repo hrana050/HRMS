@@ -13,8 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SharedKernel\SharedKernel.csproj" />
-    <ProjectReference Include="..\EmployeeService.Domain\EmployeeService.Domain.csproj" />
     <ProjectReference Include="..\EmployeeService.Infrastructure\EmployeeService.Infrastructure.csproj" />
   </ItemGroup>
 
